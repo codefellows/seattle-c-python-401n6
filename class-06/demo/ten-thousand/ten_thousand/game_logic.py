@@ -12,3 +12,10 @@ class GameLogic:
             number_list.append(roll)
         number_list = tuple(number_list)
         return number_list
+
+
+if __name__ == '__main__':
+    print('ran directly as a module')
+    # to execute run: python -m ten_thousand.game_logic
+    # Executing without the -m "can" have a different import structure in certain aspects when doing multiple imports
+    # from different folders
