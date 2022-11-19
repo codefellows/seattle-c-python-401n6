@@ -3,7 +3,10 @@ class Node:
     Docstring
     """
 
-    pass
+    def __init__(self, value, left=None, right=None):
+        self.value = value
+        self.left = left
+        self.right = right
 
 # Binary Tree
 # Create a Binary Tree class
@@ -61,8 +64,27 @@ class BinarySearchTree(BinaryTree):
     Docstring
     """
 
-    def add():
+    def add(self):
         pass
 
-    def contains():
+    def contains(self):
         pass
+
+
+if __name__ == '__main__':
+    #                       4
+    #                     /   \
+    #                   7      18
+    #                 /   \   /   \
+    #                3     1 5     11
+    # expected   [4, 7, 3, 1, 18, 5, 11]
+    bt = BinaryTree()
+    node3 = Node(3)
+    node1 = Node(1)
+    node7 = Node(7, node3, node1)
+    node5 = Node(5)
+    node11 = Node(11)
+    node18 = Node(18, node5, node11)
+    node4 = Node(4, node7, node18)
+    bt.root = node4
+    print(bt.pre_order())
