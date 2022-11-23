@@ -8,4 +8,7 @@
     - https://serverless-tau-three-66.vercel.app/api/aloha
   - [Aloha With Name](https://serverless-tau-three-66.vercel.app/api/aloha?name=Roger)
     - https://serverless-tau-three-66.vercel.app/api/aloha?name=Roger
-  - [Define]()
+  - [Define](https://serverless-tau-three-66.vercel.app/api/define?word=python)
+    - https://serverless-tau-three-66.vercel.app/api/define?word=python
+    - https://api.dictionaryapi.dev/api/v2/entries/en/
+    - https://api.dictionaryapi.dev/api/v2/entries/en/python
