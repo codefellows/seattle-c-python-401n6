@@ -12,7 +12,7 @@ We will also look at something called [Flowbite](https://flowbite.com/). This to
 
 ## Feature Tasks and Requirements
 
-- Building upon previous lab, your job is to
+- Building upon previous lab, your job is to:
   - Delete your existing database and files in the migration folder.
   - Update to a custom user model.
   - Give your site some style.
