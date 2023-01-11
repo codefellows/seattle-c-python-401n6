@@ -8,20 +8,20 @@ In addition, our Snacks projects could use a little more style. Lets look at som
 
 Let's change that by checking out a new kind of "utility first" CSS toolkit named [TailwindCSS](https://tailwindcss.com/){:target="_blank"}.
 
-We will also look at something called [Flowbite](https://flowbite.com/). This tool will provide us easy access to pre-build css code for us to use in our projects.
+We will also look at something called [Flowbite](https://flowbite.com/). This tool will provide us easy access to pre-built css code for us to use in our projects.
 
 ## Feature Tasks and Requirements
 
 - Building upon previous lab, your job is to:
-  - Delete your existing database and files in the migration folder.
-  - Update to a custom user model.
-  - Give your site some style.
+  * Delete your existing database and files in the migration folder.
+  * Update to a custom user model.
+  * Give your site some style.
 
 ## Implementation Notes
 
 - Follow the [Tailwind CSS Django - Flowbite](https://flowbite.com/docs/getting-started/django/){:target="_blank"} instructions to add Flowbite and Tailwind to your html templates.
-  - That will probably be "base.html"
-- Be sure to look at the left menu bar on Flowbite to get demo examples.
+  * That will probably be "base.html"
+  * Be sure to look at the left menu bar on Flowbite to get demo examples.
 
 ### User Acceptance Tests
 
