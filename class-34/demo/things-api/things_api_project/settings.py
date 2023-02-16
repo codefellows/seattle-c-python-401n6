@@ -91,9 +91,9 @@ WSGI_APPLICATION = "things_api_project.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": 'tqaxiztw',
-        "USER": 'tqaxiztw',
-        "PASSWORD": '9KldszGdusH-mY4EfuRaMc7BMIf1itzv',
+        "NAME": 'pfaszfvo',
+        "USER": 'pfaszfvo',
+        "PASSWORD": 'cDaiKTZ-mDdX7b506z6udW5RrGUVcDwy',
         "HOST": 'kashin.db.elephantsql.com',
         "PORT": 5432,
     }
