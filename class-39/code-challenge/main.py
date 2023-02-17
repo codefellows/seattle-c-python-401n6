@@ -1,5 +1,6 @@
 # Given a LL of single digit, non zero numbers, add one to the number "represented" by th eh LL.
 
+# Test Cases
 # 4->2->3 Happy Path
 # 4->2->4
 
@@ -9,20 +10,11 @@
 # 9->8->9
 # 9->9->0
 
-# Brute Force
-# define  counter
-# def method
-
-# assign the head to a variable
-# traverse through the ll till the end
-# check if value is 9.
-# if it is not, add one to value and done.
-# if it is 9, make it a 0, and subtract 1 from counter
-
-# 1->9->8->9->-9
+# Brute Force - Method Possible
+# Recursion
+# Reverse LL
 
 # reversed
-
 # 9->9->8->9->-1
 # 0->0->9
 # re-reverse the ll
