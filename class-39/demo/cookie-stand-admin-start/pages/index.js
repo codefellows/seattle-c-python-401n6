@@ -1,32 +1,30 @@
 import Head from 'next/head';
+import { useAuth } from '../contexts/auth';
+import useResource from '../hooks/useResource';
 
 export default function Home() {
 
+    const { user, login } = useAuth();
 
     return (
         <div className="p-4">
             <Head>
                 <title>Cookie Stand Admin</title>
             </Head>
-            <CookieStandAdmin />
+
+            {user ?
+                <CookieStandAdmin />
+                :
+                <LoginForm onLogin={login} />
+            }
+
         </div>
     );
 }
 
-
 function CookieStandAdmin() {
 
-    const resources = [
-        {
-            id: 1,
-            location: 'Seattle',
-            hourly_sales: [6, 7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7],
-        }
-    ];
-
-    function deleteResource(id) {
-        console.log("delete resource");
-    }
+    const { resources, deleteResource } = useResource();
 
     return (
         <>
@@ -38,6 +36,9 @@ function CookieStandAdmin() {
 
 function CookieStandForm() {
 
+    const { user } = useAuth();
+    const { createResource } = useResource();
+
     function handleSubmit(event) {
         event.preventDefault();
         const info = {
@@ -47,8 +48,7 @@ function CookieStandForm() {
             average_cookies_per_sale: parseFloat(event.target.average.value),
             owner: user.id,
         };
-
-        console.log(info);
+        createResource(info);
 
     }
 
@@ -117,5 +117,27 @@ function CookieStandRow({ info, deleteStand }) {
             {info.hourly_sales.map((slot, index) => <td key={index}>{slot}</td>)}
             <td>{info.hourly_sales.reduce((num, sum) => num + sum, 0)}</td>
         </tr>
+    );
+}
+
+
+function LoginForm({ onLogin }) {
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+        onLogin(event.target.username.value, event.target.password.value);
+    }
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <fieldset autoComplete='off'>
+                <legend>Log In</legend>
+                <label htmlFor="username">Username</label>
+                <input name="username" />
+                <label htmlFor="password">Password</label>
+                <input type="password" name="password" />
+                <button>Log In</button>
+            </fieldset>
+        </form>
     );
 }
